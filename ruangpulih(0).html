@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ruang Pulih Coffee</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#F3E5D0;
+color:#3B2415;
+}
+
+
+nav{
+background:#3B2415;
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+}
+
+
+/* HERO */
+
+.hero{
+
+height:75vh;
+
+background:
+linear-gradient(#0007,#0007),
+url("coffee.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+}
+
+
+.hero img{
+
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+
+}
+
+
+
+.hero h1{
+
+margin-top:15px;
+
+}
+
+
+
+section{
+
+padding:45px 8%;
+
+}
+
+
+h2{
+
+text-align:center;
+margin-bottom:25px;
+
+}
+
+
+
+
+button{
+
+background:#A67B5B;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:20px;
+cursor:pointer;
+
+}
+
+
+
+
+/* MENU */
+
+
+.menu{
+
+text-align:center;
+
+}
+
+
+/* THUMBNAIL MENU */
+
+
+.menu-thumb{
+
+margin-top:20px;
+
+}
+
+
+.menu-thumb img{
+
+width:100%;
+max-width:320px;
+border-radius:15px;
+cursor:pointer;
+border:3px solid #A67B5B;
+box-shadow:0 4px 15px #0003;
+transition:transform .2s;
+
+}
+
+
+.menu-thumb img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+.menu-thumb p{
+
+margin-top:8px;
+font-size:13px;
+color:#A67B5B;
+font-style:italic;
+
+}
+
+
+/* POPUP MENU */
+
+
+.modal{
+
+display:none;
+position:fixed;
+z-index:5;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#0008;
+
+justify-content:center;
+align-items:center;
+
+}
+
+
+.modal-box{
+
+position:relative;
+
+}
+
+
+.modal-box img{
+
+width:80vw;
+max-width:450px;
+border-radius:15px;
+
+}
+
+
+.modal-close{
+
+position:absolute;
+top:-14px;
+right:-14px;
+
+background:#3B2415;
+color:white;
+border:none;
+width:32px;
+height:32px;
+border-radius:50%;
+font-size:16px;
+cursor:pointer;
+padding:0;
+
+}
+
+
+/* KOPI GRID */
+
+
+.kopi{
+
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+gap:20px;
+
+}
+
+
+.kopi div{
+
+background:white;
+padding:15px;
+border-radius:15px;
+text-align:center;
+
+}
+
+
+.kopi img{
+
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:15px;
+
+}
+
+
+
+
+/* SPACE */
+
+
+.slider{
+
+overflow:hidden;
+
+}
+
+
+
+.slide{
+
+display:flex;
+transition:.5s;
+
+}
+
+
+
+.slide img{
+
+width:100%;
+flex-shrink:0;
+border-radius:15px;
+
+}
+
+
+.tombol{
+
+text-align:center;
+margin-top:20px;
+
+}
+
+
+
+/* LOKASI */
+
+
+.lokasi img{
+
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+
+}
+
+
+.lokasi{
+
+text-align:center;
+
+}
+
+
+
+footer{
+
+background:#3B2415;
+color:white;
+padding:20px;
+text-align:center;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav>
+
+Ruang Pulih Coffee
+
+</nav>
+
+
+<div class="hero">
+
+<div>
+
+<img src="RP.png">
+
+<h1>RUANG PULIH COFFEE<h1>
+
+
+<p>Coffee & Enjoy</p>
+
+</div>
+
+</div>
+
+
+<!-- MENU -->
+
+
+<section>
+
+<h2>Menu</h2>
+
+<div class="menu">
+
+  <button onclick="bukaMenu()">Lihat Menu</button>
+
+  <!-- Thumbnail gambar menu -->
+  <div class="menu-thumb">
+    <img src="menu.jpg" onclick="bukaMenu()">
+    <p>👆 Klik untuk lihat detail</p>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- KOPI -->
+
+
+<section>
+
+<h2>Our Drink</h2>
+
+<div class="kopi">
+
+  <div>
+    <img src="mr.jpg">
+    <h3>Americano</h3>
+    <p>Rp12.000</p>
+  </div>
+
+  <div>
+    <img src="ky.jpg">
+    <h3>Kyarameru</h3>
+    <p>Rp18.000</p>
+  </div>
+
+  <div>
+    <img src="mat.jpg">
+    <h3>MaaCaa</h3>
+    <p>Rp15.000</p>
+  </div>
+
+  <div>
+    <img src="cc.png">
+    <h3>Socola</h3>
+    <p>Rp13.000</p>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- SPACE -->
+
+
+<section>
+
+<h2>Space</h2>
+
+<div class="slider">
+
+  <div class="slide" id="slide">
+
+    <img src="r1.jpg">
+    <img src="r2.jpg">
+    <img src="r3.jpg">
+
+  </div>
+
+</div>
+
+<div class="tombol">
+
+  <button onclick="next()">Slide &rarr;</button>
+
+</div>
+
+</section>
+
+
+<!-- LOKASI -->
+
+
+<section class="lokasi">
+
+<h2>Lokasi</h2>
+
+<img src="loc.jpg">
+
+<br><br>
+
+<a href="https://maps.app.goo.gl/NU2AybHodcGU3vqt8" target="_blank">
+  <button>📍 Lihat Lokasi</button>
+</a>
+
+</section>
+
+
+<!-- POPUP -->
+
+
+<div class="modal" id="modal" onclick="tutupMenuLuar(event)">
+
+  <div class="modal-box">
+    <button class="modal-close" onclick="tutupMenu()">✕</button>
+    <img src="menu.jpg">
+  </div>
+
+</div>
+
+
+<footer>
+
+@RUANGPULIH.COFFEE
+
+</footer>
+
+
+<script>
+
+
+function bukaMenu(){
+  document.getElementById("modal").style.display="flex";
+}
+
+function tutupMenu(){
+  document.getElementById("modal").style.display="none";
+}
+
+function tutupMenuLuar(e){
+  if(e.target===document.getElementById("modal")){
+    tutupMenu();
+  }
+}
+
+
+let posisi=0;
+
+function next(){
+
+  posisi++;
+
+  if(posisi>2){
+    posisi=0;
+  }
+
+  document.getElementById("slide").style.transform=
+  "translateX(-"+posisi*100+"%)";
+
+}
+
+
+</script>
+
+
+</body>
+</html>
